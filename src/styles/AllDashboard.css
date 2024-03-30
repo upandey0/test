@@ -1,0 +1,21 @@
+.swiper-slide .innerCardSize img {
+    width: 100%;
+    height: 200px !important;
+
+}
+
+.appsCard {
+    height: 220px;
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.appsCard img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}

@@ -1,0 +1,104 @@
+.leftSide:nth-child(2) {
+    margin: 0 10px;
+}
+
+.navColor {
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme {
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+    background-color: black !important;
+    color: #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.navMenuIcons {
+    font-size: 25px;
+    color: rgb(141, 141, 141);
+}
+
+.sidebar {
+    width: 100%;
+    background-color: white;
+    height: 90vh;
+    /* padding: 0 10px; */
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar .menuItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar .menuItemNested {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menuItemChild {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar li span {
+    font-size: 30px;
+    color: rgb(154, 199, 232);
+    /* align-self: center; */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    /* padding:0 10px; */
+    font-size: 20px;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.dark-theme a {
+
+    color: #fff !important;
+
+}
+
+.sidebar a:hover {
+    color: rgb(154, 199, 232);
+}
+
+.sidebar ul ul {
+    display: none;
+    padding-left: 20px;
+}
+
+.sidebar ul ul li a {
+    font-size: small;
+    margin: 0 20px;
+}
+
+.sidebar ul.active {
+    display: block;
+}
+
+.logoDesign {
+    font-size: 30px;
+    margin: 0 5px;
+}

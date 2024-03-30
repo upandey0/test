@@ -1,0 +1,98 @@
+.headingDashboard h3 {
+    font-weight: 700;
+}
+
+.headingDashboard p {
+    font-weight: 300;
+    color: rgb(148, 142, 142);
+    font-size: 1.2rem;
+}
+
+.dashboardheaderTop1 {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.dashboardheaderTop2 {
+    height: 80%;
+}
+
+.dashboardUserName {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboardUserName h3 {
+    color: white;
+    font-weight: 400;
+}
+
+.headingDashboard {
+    width: 100%;
+    height: 35vh;
+    background: linear-gradient(to right, rgb(20, 81, 235), rgb(64, 39, 216));
+}
+
+.dashboardFilterHeadFilters {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dashboardFilterHeadFilters .filterImplementByCompany {
+    margin: 2px 3px;
+}
+
+.firstHeading h3 {
+    font-weight: 400;
+    color: grey;
+}
+
+.filterImplementByCompany button {
+    width: 100px;
+}
+
+.widthsetForDashboard {
+    /* width: 100% !important; */
+    /* margin: 100px 0 !important; */
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 260 !important;
+    /* width: 100% !important; */
+}
+
+.swiper-slide .innerCard img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* object-fit: contain; */
+    transition: transform 0.4s;
+}
+
+.swiper-slide .innerCard img:hover {
+    transform: scale(1.01);
+    border-radius: inherit;
+}
+
+.innerCard p {
+    margin: 10px;
+}
