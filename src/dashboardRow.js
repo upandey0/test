@@ -69,10 +69,100 @@ export const appsName = [
   { id: 10, name: "Auth - Register" },
   { id: 11, name: "Auth - Register (Social)" },
   { id: 12, name: "Invoice" },
-  { id: 13, name: "Knowledgebase - Article" },
+  { id: 13, name: " Article" },
   { id: 14, name: "Knowledgebase - Category" },
   { id: 15, name: "Knowledgebase - Home 1" },
   { id: 16, name: "Knowledgebase - Home 2" },
   { id: 17, name: "Pricing" },
   { id: 18, name: "Wizard" },
+];
+
+export const arrangedApps = [
+  {
+    category: "Account",
+    apps: [
+      { id: 1, name: "Billing" },
+      { id: 2, name: "Notifications" },
+      { id: 3, name: "Profile" },
+      { id: 4, name: "Security" },
+    ],
+  },
+  {
+    category: "Auth",
+    apps: [
+      { id: 5, name: " Login" },
+      { id: 6, name: " Login (Social)" },
+      { id: 7, name: " Multi Tenant" },
+      { id: 8, name: " Password" },
+      { id: 9, name: " Password (Social)" },
+      { id: 10, name: " Register" },
+      { id: 11, name: " Register (Social)" },
+    ],
+  },
+  {
+    category: "Invoice",
+    apps: [{ id: 12, name: "Invoice" }],
+  },
+  {
+    category: "Knowledgebase",
+    apps: [
+      { id: 13, name: " Article" },
+      { id: 14, name: " Category" },
+      { id: 15, name: " Home 1" },
+      { id: 16, name: " Home 2" },
+    ],
+  },
+  {
+    category: "Pricing",
+    apps: [{ id: 17, name: "Pricing" }],
+  },
+  {
+    category: "Wizard",
+    apps: [{ id: 18, name: "Wizard" }],
+  },
+];
+
+export const uploadDocs = [
+  {
+    category: "Invoices",
+    id: Date.now(),
+    subCategory: [
+      {
+        name: "Sales",
+        listName: ["Goods", "Services"],
+      },
+      {
+        name: "Purchase",
+        listName: ["Services", "Assets", "Investment"],
+      },
+      {
+        name: "Credit note",
+        listName: ["Credit note"],
+      },
+      {
+        name: "DebitNotes",
+        listName: ["DebitNotes"],
+      },
+    ],
+  },
+  {
+    category: "Upload Bank Statement",
+    id: Date.now(),
+    subCategory: [
+      {
+        name: "Bank Statement",
+        listName: ["Bank Statement"],
+      },
+    ],
+  },
+  {
+    category: "Other Docs",
+    id: Date.now(),
+    subCategory: [
+      {
+        name: "Docs",
+        listName: ["Docs"],
+      },
+    ],
+  },
 ];

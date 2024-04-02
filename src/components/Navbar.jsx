@@ -5,6 +5,7 @@ import { FaCircleUser } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Switch } from "antd";
 import { themeContext } from "../context/mycontext";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { theme, changeTheme } = useContext(themeContext);
 
@@ -31,11 +32,11 @@ const Navbar = () => {
           id="navbarSupportedContent"
         >
           <div className="leftNav d-flex align-items-center">
-            <div className="leftSide">
+            {/* <div className="leftSide">
               <span>
                 <IoReorderThreeOutline fontSize={40} />
               </span>
-            </div>
+            </div> */}
             <div className="leftSide">
               <h5>
                 <svg
@@ -75,9 +76,22 @@ const Navbar = () => {
                 </span>
               </h5>
             </div>
-            <div className="leftSide"></div>
+            {/* <div className="leftSide">
+              <Link to="/">
+                <span>Home</span>
+              </Link>
+            </div>
+            <div className="leftSide">
+              <Link to="#">
+                <span>Subscription</span>
+              </Link>
+            </div> */}
           </div>
-
+          <div className="helloCen">
+            {" "}
+            <span>Home</span>
+            <span className="mx-2">Subscription</span>
+          </div>
           <ul class="navbar-nav mb-2 mb-lg-0 ">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">

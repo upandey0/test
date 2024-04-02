@@ -27,6 +27,7 @@
     width: 100%;
     background-color: white;
     height: 90vh;
+    overflow-y: auto !important;
     /* padding: 0 10px; */
 
 }
@@ -52,11 +53,23 @@
     justify-content: space-between;
 }
 
+.SubmenuItemNested {
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+}
+
+
+
 .menuItemChild {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
+
+
+
+
 
 .sidebar li span {
     font-size: 30px;
@@ -98,7 +111,16 @@
     display: block;
 }
 
+.sidebar ul.activeSub {
+    display: block;
+}
+
 .logoDesign {
     font-size: 30px;
     margin: 0 5px;
+}
+
+.leftSide a {
+    text-decoration: none;
+    color: grey;
 }

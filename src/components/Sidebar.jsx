@@ -10,14 +10,19 @@ import { GiSellCard } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { themeContext } from "../context/mycontext";
-import { dashboards } from "../dashboardRow";
+import { dashboards, arrangedApps } from "../dashboardRow";
 const Sidebar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
+  const [activeSubMenu, setActiveSubMenu] = useState(null);
 
   const handleMenuClick = (index) => {
     setActiveMenu(activeMenu === index ? null : index);
   };
-  const { theme, changeTheme } = useContext(themeContext);
+
+  const handleSubMenuClick = (index) => {
+    setActiveSubMenu(activeSubMenu === index ? null : index);
+  };
+  const { theme } = useContext(themeContext);
 
   return (
     <div
@@ -65,7 +70,7 @@ const Sidebar = () => {
               <span>
                 <MdPages />
               </span>
-              <Link to="#">Pages</Link>
+              <Link to="#">Services</Link>
             </div>
             <div className="dropDownIcon">
               <span>
@@ -79,24 +84,20 @@ const Sidebar = () => {
           </div>
 
           <ul className={activeMenu === 0 ? "active" : ""}>
-            <li>
-              <Link to="#">Product 1</Link>
-            </li>
-            <li>
-              <Link to="#">Product 2</Link>
-            </li>
-            <li>
-              <Link to="#">Product 3</Link>
-            </li>
+            {arrangedApps?.map((a, i) => (
+              <li>
+                <Link to="#">{a.category}</Link>
+              </li>
+            ))}
           </ul>
         </li>
-        <li onClick={() => handleMenuClick(1)}>
-          <div className="menuItemNested">
+        <li>
+          <div className="menuItemNested" onClick={() => handleMenuClick(1)}>
             <div className="menuItemChild">
               <span>
                 <MdHomeRepairService />
               </span>
-              <Link to="#">Services</Link>
+              <Link to="#">App Pages</Link>
             </div>
             <div className="dropDownIcon">
               <span>
@@ -110,15 +111,32 @@ const Sidebar = () => {
           </div>
 
           <ul className={activeMenu === 1 ? "active" : ""}>
-            <li>
-              <Link to="#">Service 1</Link>
-            </li>
-            <li>
-              <Link to="#">Service 2</Link>
-            </li>
-            <li>
-              <Link to="#">Service 3</Link>
-            </li>
+            {arrangedApps?.map((a, i) => (
+              <li onClick={() => handleSubMenuClick(i)} className="m-0 p-0 g-0">
+                <div className="SubmenuItemNested">
+                  <div className="SubmenuItemChild">
+                    <Link to="#">{a?.category}</Link>
+                  </div>
+                  <div className="dropDownIcon">
+                    <span>
+                      {activeSubMenu === i ? (
+                        <MdKeyboardArrowRight fontSize={20} />
+                      ) : (
+                        <MdKeyboardArrowDown fontSize={20} />
+                      )}
+                    </span>
+                  </div>
+                </div>
+
+                <ul className={activeSubMenu === i ? "activeSub" : ""}>
+                  {a?.apps?.map((b, index) => (
+                    <li>
+                      <Link to="#">{b.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
           </ul>
         </li>
         <li>

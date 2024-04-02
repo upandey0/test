@@ -4,11 +4,13 @@ import "./styles/layout.css";
 import "./styles/navbar.css";
 import "./styles/dashboard.css";
 import "./styles/AllDashboard.css";
+import "./styles/upload.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sales from "./pages/Sales";
 import Dashboard from "./pages/Dashboard";
 import ReportsType from "./pages/ReportsType";
+import UploadReports from "./pages/UploadReports";
 
 const App = () => {
   return (
@@ -19,6 +21,7 @@ const App = () => {
           <Route path="/dashboard/:id" element={<ReportsType />} />
 
           <Route path="/dashboard/:id/sales/:id" element={<Sales />} />
+          <Route path="/upload" element={<UploadReports />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,0 +1,74 @@
+{
+  "companies": [
+    {
+      "name": "Company A",
+      "countries": [
+        {
+          "name": "Country X",
+          "cities": [
+            {
+              "name": "City 1",
+              "offices": [
+                {
+                  "name": "Office 1",
+                  "reports": [
+                    {
+                      "id": 1,
+                      "title": "Report 1",
+                      "date": "2024-03-30"
+                    },
+                    {
+                      "id": 2,
+                      "title": "Report 2",
+                      "date": "2024-03-31"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "City 2",
+              "offices": [
+                {
+                  "name": "Office 2",
+                  "reports": [
+                    {
+                      "id": 3,
+                      "title": "Report 3",
+                      "date": "2024-04-01"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Company B",
+      "countries": [
+        {
+          "name": "Country Y",
+          "cities": [
+            {
+              "name": "City 3",
+              "offices": [
+                {
+                  "name": "Office 3",
+                  "reports": [
+                    {
+                      "id": 4,
+                      "title": "Report 4",
+                      "date": "2024-04-02"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

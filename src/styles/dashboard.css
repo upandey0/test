@@ -49,9 +49,46 @@
     margin: 2px 3px;
 }
 
+.firstHeading {
+    position: relative;
+}
+
+.listReports {
+    position: absolute;
+    left: 20px;
+    top: 45px;
+    z-index: 99;
+    height: auto;
+    width: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.listReportsVisual {
+    display: block;
+}
+
+.listReports div {
+    display: flex;
+    flex-direction: column;
+}
+
+.listReports div span {
+    list-style-type: none;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.listReports div span:hover {
+    color: rgb(154, 199, 232);
+}
+
 .firstHeading h3 {
     font-weight: 400;
     color: grey;
+    cursor: pointer;
 }
 
 .filterImplementByCompany button {
@@ -59,8 +96,89 @@
 }
 
 .widthsetForDashboard {
-    /* width: 100% !important; */
-    /* margin: 100px 0 !important; */
+    position: relative;
+}
+
+.dashboardListModel {
+    position: absolute;
+    right: 3px;
+    top: 45px;
+    z-index: 99;
+    height: auto;
+    width: fit-content;
+    padding: 5px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.companyList {
+    position: absolute;
+    right: 143px;
+    top: 45px;
+    z-index: 99;
+    min-height: 160px;
+    width: fit-content;
+    padding: 10px 2px;
+    background-color: white;
+    /* border-radius: 10px 0 0 10px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* display: none; */
+}
+
+.companyList div:hover,
+.CountryList div:hover {
+    background-color: rgb(154, 199, 232);
+    margin: 3px 0;
+    cursor: pointer;
+    padding: 2px;
+    color: white !important;
+
+}
+
+.companyList div span:nth-child(1),
+.CountryList div span:nth-child(1) {
+    padding-right: 30px;
+}
+
+.companyList div span,
+.CountryList div span {
+    white-space: nowrap;
+}
+
+.CountryList {
+    position: absolute;
+    right: 3px;
+    top: 45px;
+    z-index: 99;
+    min-height: 160px;
+    width: fit-content;
+    padding: 10px 2px;
+    background-color: white;
+    /* border-radius: 0 10px 10px 0; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* display: none; */
+}
+
+
+
+.dashboardListModel .itemList span {
+
+    font-weight: 200;
+    font-size: 1rem;
+    margin: 3px 0;
+    padding: 10px 0;
+    white-space: nowrap !important;
+    cursor: pointer;
+}
+
+.dashboardListModel .itemList span:hover {
+    color: rgb(154, 199, 232);
+}
+
+.dashboardListModelVisual {
+    display: block;
 }
 
 .swiper {
