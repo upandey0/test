@@ -7,12 +7,39 @@ export const dashboards = [
   {
     id: 2,
     name: "Admin",
-    reports: ["Balance Sheet", "Profit and Loss", "Cash Flow", "Prepare"],
+    reports: [
+      "User Management",
+      "Content Management",
+      "Analytics and Reporting",
+      "System Health and Monitoring",
+      "Customer Support and Tickets",
+      "Inventory Management",
+      "Task Management",
+      "Financial Management",
+      "Security and Access Control",
+      "Communication and Notifications",
+      "Settings and Configuration",
+      "Audit Trail and History",
+      "Data Visualization",
+      "Mobile Responsiveness",
+      "Customization and Personalization",
+    ],
   },
   {
     id: 3,
     name: "HR",
-    reports: ["Balance Sheet", "Profit and Loss", "Cash Flow", "Prepare"],
+    reports: [
+      "Employee Performance Dashboard",
+      "Recruitment Dashboard",
+      "Employee Engagement Dashboard",
+      "Training and Development Dashboard",
+      "Turnover and Retention Dashboard",
+      "Diversity and Inclusion Dashboard",
+      "Compensation and Benefits Dashboard",
+      "Attendance and Leave Management Dashboard",
+      "Health and Wellness Dashboard",
+      "HR Analytics Dashboard",
+    ],
   },
   {
     id: 4,
@@ -150,7 +177,11 @@ export const uploadDocs = [
     id: Date.now(),
     subCategory: [
       {
-        name: "Bank Statement",
+        name: "Saving Account",
+        listName: ["Bank Statement"],
+      },
+      {
+        name: "Current Account",
         listName: ["Bank Statement"],
       },
     ],
@@ -161,6 +192,60 @@ export const uploadDocs = [
     subCategory: [
       {
         name: "Docs",
+        listName: ["Docs"],
+      },
+    ],
+  },
+
+  {
+    category: "Reports",
+    id: Date.now(),
+    subCategory: [
+      {
+        name: "Finance",
+        listName: ["Balance", "Profit Loss", "cash flow"],
+      },
+      {
+        name: "Admin",
+        listName: [
+          "User Management",
+          "Content Management",
+          "Analytics and Reporting",
+          "System Health and Monitoring",
+          // "Customer Support and Tickets",
+          // "Inventory Management",
+          // "Task Management",
+          // "Financial Management",
+          // "Security and Access Control",
+          // "Communication and Notifications",
+          // "Settings and Configuration",
+          // "Audit Trail and History",
+          // "Data Visualization",
+          // "Mobile Responsiveness",
+          // "Customization and Personalization",
+        ],
+      },
+      {
+        name: "Hr",
+        listName: [
+          "Employee Performance Dashboard",
+          "Recruitment Dashboard",
+          "Employee Engagement Dashboard",
+          // "Training and Development Dashboard",
+          // "Turnover and Retention Dashboard",
+          // "Diversity and Inclusion Dashboard",
+          // "Compensation and Benefits Dashboard",
+          // "Attendance and Leave Management Dashboard",
+          // "Health and Wellness Dashboard",
+          // "HR Analytics Dashboard"
+        ],
+      },
+      {
+        name: "Mis",
+        listName: ["Docs"],
+      },
+      {
+        name: "Marketing",
         listName: ["Docs"],
       },
     ],

@@ -89,7 +89,9 @@ const Navbar = () => {
           </div>
           <div className="helloCen">
             {" "}
-            <span>Home</span>
+            <Link to="/">
+              <span>Home</span>
+            </Link>
             <span className="mx-2">Subscription</span>
           </div>
           <ul class="navbar-nav mb-2 mb-lg-0 ">

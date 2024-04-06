@@ -32,6 +32,10 @@ const UploadReports = () => {
               <span></span>
               <span>Other Docs</span>
             </div>
+            <div className="category1" onClick={() => setActiveMenu(3)}>
+              <span></span>
+              <span>Reports</span>
+            </div>
           </div>
         </div>
         <div className="row m-0 p-0 g-0 ">
@@ -51,7 +55,7 @@ const UploadReports = () => {
                           handleOpen();
                         }}
                       >
-                        <span>{inv?.name}</span>
+                        <span style={{ fontSize: "1rem" }}>{inv?.name}</span>
                       </div>
                     </div>
                   ))}

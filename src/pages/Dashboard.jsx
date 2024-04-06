@@ -24,8 +24,22 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const { theme, changeTheme } = useContext(themeContext);
   const [activeMenu, setActiveMenu] = useState(null);
+  const [companyIndex, setCompanyIndex] = useState(0);
+  const [countryIndex, setCountryIndex] = useState(0);
+  const [cityIndex, setCityIndex] = useState(0);
+  const [companyShow, setCompanyShow] = useState(false);
   const handleMenuClick = (index) => {
     setActiveMenu(activeMenu === index ? null : index);
+  };
+  const handleCompanyIndex = (ci) => {
+    setCompanyIndex(ci);
+  };
+  const handleCountryIndex = (ci) => {
+    setCountryIndex(ci);
+  };
+
+  const handleCityIndex = (ci) => {
+    setCityIndex(ci);
   };
   return (
     <Layout>
@@ -44,15 +58,23 @@ const Dashboard = () => {
               </button>
             </div>
             <div className="widthsetForDashboard ">
-              <button className="btn btn-light">
+              <button
+                className="btn btn-light"
+                onMouseOver={() => setCompanyShow(!companyShow)}
+              >
                 <span className="my-2">
                   <MdOutlineSort fontSize={23} />
                 </span>
                 <span className="my-5"> Company</span>
               </button>
-              <div className="companyList">
+              <div className={`companyList ${companyShow && "companyShowIng"}`}>
                 {company?.companies.map((c, ci) => (
-                  <div className="d-flex justify-content-between align-items-center">
+                  <div
+                    className={`d-flex  justify-content-between align-items-center ${
+                      ci === companyIndex && "bg-primary text-light"
+                    }`}
+                    onClick={() => handleCompanyIndex(ci)}
+                  >
                     <span>{c.name}</span>
                     <span>
                       <MdKeyboardArrowRight fontSize={25} />
@@ -61,9 +83,32 @@ const Dashboard = () => {
                 ))}
               </div>
 
-              <div className="CountryList">
-                {company?.companies.map((c, ci) => (
-                  <div className="d-flex justify-content-between align-items-center">
+              <div className={`CountryList ${companyShow && "companyShowIng"}`}>
+                {company?.companies[companyIndex]?.countries?.map((c, ci) => (
+                  <div
+                    className={`d-flex  justify-content-between align-items-center ${
+                      ci === countryIndex && "bg-primary text-light"
+                    }`}
+                    onClick={() => handleCountryIndex(ci)}
+                  >
+                    <span>{c?.name}</span>
+                    <span>
+                      <MdKeyboardArrowRight fontSize={25} />
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className={`CityList ${companyShow && "companyShowIng"}`}>
+                {company?.companies[companyIndex]?.countries?.[
+                  countryIndex
+                ]?.cities?.map((c, ci) => (
+                  <div
+                    className={`d-flex  justify-content-between align-items-center ${
+                      ci === cityIndex && "bg-primary text-light"
+                    }`}
+                    onClick={() => handleCityIndex(ci)}
+                  >
                     <span>{c.name}</span>
                     <span>
                       <MdKeyboardArrowRight fontSize={25} />
@@ -72,8 +117,10 @@ const Dashboard = () => {
                 ))}
               </div>
 
-              {/* <div className="CityList">
-                {company?.companies.map((c, ci) => (
+              <div className={`OfficeList ${companyShow && "companyShowIng"}`}>
+                {company?.companies[companyIndex]?.countries?.[
+                  countryIndex
+                ]?.cities[cityIndex].offices?.map((c, ci) => (
                   <div className="d-flex justify-content-between align-items-center">
                     <span>{c.name}</span>
                     <span>
@@ -81,12 +128,14 @@ const Dashboard = () => {
                     </span>
                   </div>
                 ))}
-              </div> */}
+              </div>
             </div>
           </div>
           <div className="dashboardheaderTop2 p-2 d-flex justify-content-center align-items-center">
             <div className="dashboardUserName ">
-              <h3>Welcome Vishal kumar</h3>
+              <h3>Welcome</h3>
+              <br />
+              <p>Vishal kumar</p>
             </div>
           </div>
         </div>
@@ -127,10 +176,12 @@ const Dashboard = () => {
                 <Swiper
                   slidesPerView={index > 0 ? 4 : 3}
                   spaceBetween={30}
-                  freeMode={true}
+                  // freeMode={true}
+                  centeredSlides={false}
                   pagination={{
                     clickable: true,
                   }}
+                  navigation={true}
                   modules={[FreeMode, Pagination]}
                   className="mySwiper"
                 >

@@ -1,43 +1,66 @@
 {
   "companies": [
     {
-      "name": "Company A",
+      "name": "Microsoft",
       "countries": [
         {
-          "name": "Country X",
+          "name": "India",
           "cities": [
             {
-              "name": "City 1",
+              "name": "Bangalore",
               "offices": [
                 {
-                  "name": "Office 1",
-                  "reports": [
-                    {
-                      "id": 1,
-                      "title": "Report 1",
-                      "date": "2024-03-30"
-                    },
-                    {
-                      "id": 2,
-                      "title": "Report 2",
-                      "date": "2024-03-31"
-                    }
-                  ]
+                  "name": "Silicon Valley"
+                },
+                {
+                  "name": "Innovation Hub"
                 }
               ]
             },
             {
-              "name": "City 2",
+              "name": "Mumbai",
               "offices": [
                 {
-                  "name": "Office 2",
-                  "reports": [
-                    {
-                      "id": 3,
-                      "title": "Report 3",
-                      "date": "2024-04-01"
-                    }
-                  ]
+                  "name": "Tech Park"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "China",
+          "cities": [
+            {
+              "name": "Beijing",
+              "offices": [
+                {
+                  "name": "Dragon Tower"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "United States",
+          "cities": [
+            {
+              "name": "Redmond",
+              "offices": [
+                {
+                  "name": "Microsoft Campus"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "United Kingdom",
+          "cities": [
+            {
+              "name": "London",
+              "offices": [
+                {
+                  "name": "Tech Hub"
                 }
               ]
             }
@@ -46,23 +69,55 @@
       ]
     },
     {
-      "name": "Company B",
+      "name": "Google",
       "countries": [
         {
-          "name": "Country Y",
+          "name": "Germany",
           "cities": [
             {
-              "name": "City 3",
+              "name": "Berlin",
               "offices": [
                 {
-                  "name": "Office 3",
-                  "reports": [
-                    {
-                      "id": 4,
-                      "title": "Report 4",
-                      "date": "2024-04-02"
-                    }
-                  ]
+                  "name": "Googleplex"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Australia",
+          "cities": [
+            {
+              "name": "Sydney",
+              "offices": [
+                {
+                  "name": "Tech Center"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Brazil",
+          "cities": [
+            {
+              "name": "Sao Paulo",
+              "offices": [
+                {
+                  "name": "Innovation Lab"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Canada",
+          "cities": [
+            {
+              "name": "Toronto",
+              "offices": [
+                {
+                  "name": "Digital Hub"
                 }
               ]
             }

@@ -144,7 +144,7 @@ const Sidebar = () => {
             <span>
               <GiSellCard />
             </span>
-            <Link to="/sales">Sell</Link>
+            <Link to="/upload">Uploads</Link>
           </div>
         </li>
       </ul>
