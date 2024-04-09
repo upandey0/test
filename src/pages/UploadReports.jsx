@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ListReport from './ListReports'
 import {
   MdDashboard,
   MdPages,
@@ -64,7 +65,9 @@ const UploadReports = () => {
             </div>
             <div className="col-md-5">
               <div className="row m-0 g-0 p-0">
-                <div className="uploadedNameSectionList"></div>
+                <div className="uploadedNameSectionList">
+                  <ListReport/>
+                </div>
               </div>
             </div>
           </div>

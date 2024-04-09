@@ -55,7 +55,7 @@
     height: 20px;
     /* height: fit-content; */
     background-color: rgb(154, 199, 232);
-    min-width: 140px;
+    min-width: 5rem;
     margin: 5px 2px;
     padding: 20px 40px;
     border-radius: 10px;

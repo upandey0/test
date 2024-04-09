@@ -28,9 +28,12 @@ const Dashboard = () => {
   const [countryIndex, setCountryIndex] = useState(0);
   const [cityIndex, setCityIndex] = useState(0);
   const [companyShow, setCompanyShow] = useState(false);
-  const handleMenuClick = (index) => {
+  const handleMenuMouseOver = (index) => {
     setActiveMenu(activeMenu === index ? null : index);
   };
+  const handleMouseOut=(index)=>{
+    setActiveMenu(null)
+  }
   const handleCompanyIndex = (ci) => {
     setCompanyIndex(ci);
   };
@@ -46,17 +49,6 @@ const Dashboard = () => {
       <div className="container-fluid p-0 g-0 m-0">
         <div className="row p-0 g-0 m-0 headingDashboard">
           <div className="dashboardheaderTop1 p-2">
-            <div className=" dashboardFilterHead">
-              <button
-                className="btn btn-light"
-                onClick={() => navigate("/upload")}
-              >
-                <span className="my-2">
-                  <MdOutlineFileUpload fontSize={23} />
-                </span>
-                <span className="my-5"> Upload Files</span>
-              </button>
-            </div>
             <div className="widthsetForDashboard ">
               <button
                 className="btn btn-light"
@@ -130,6 +122,17 @@ const Dashboard = () => {
                 ))}
               </div>
             </div>
+            <div className=" dashboardFilterHead">
+              <button
+                className="btn btn-light"
+                onClick={() => navigate("/upload")}
+              >
+                <span className="my-2">
+                  <MdOutlineFileUpload fontSize={23} />
+                </span>
+                <span className="my-5"> Upload Files</span>
+              </button>
+            </div>
           </div>
           <div className="dashboardheaderTop2 p-2 d-flex justify-content-center align-items-center">
             <div className="dashboardUserName ">
@@ -143,18 +146,18 @@ const Dashboard = () => {
         {dashboards?.map((d, index) => (
           <>
             <div className="row firstHeading mt-1 p-2">
-              <h3 onClick={() => handleMenuClick(index)}>
+              <button  className="border-0" onMouseOver={() => handleMenuMouseOver(index)} >
                 <span>{d.name}</span>
-                <span>
+                {/* <span >
                   {activeMenu === index ? (
                     <MdKeyboardArrowRight fontSize={35} />
                   ) : (
                     <MdKeyboardArrowDown fontSize={35} />
                   )}
-                </span>
-              </h3>
+                </span> */}
+              </button>
               <hr />
-              <div
+              <div onMouseOut={()=>handleMouseOut()}
                 className={`listReports ${
                   activeMenu === index ? "listReportsVisual" : ""
                 }`}
@@ -175,7 +178,7 @@ const Dashboard = () => {
               <div className="parentService my-2">
                 <Swiper
                   slidesPerView={index > 0 ? 4 : 3}
-                  spaceBetween={30}
+                  spaceBetween={20}
                   // freeMode={true}
                   centeredSlides={false}
                   pagination={{

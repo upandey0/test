@@ -1,0 +1,16 @@
+.list-report{
+    height: 1rem; 
+    display: flex;
+  align-items: center;
+    
+}
+.list-report-text{
+    font-size:0.75rem ;
+    /* padding-left: 0.7rem;  */
+    /* padding-bottom: 0px;
+    margin-right:0px; */
+}
+.list-icon{
+  height:0.7rem;
+  width:0.7rem;
+}
