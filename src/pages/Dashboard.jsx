@@ -22,7 +22,7 @@ import company from "../company.json";
 console.log(company);
 const Dashboard = () => {
   const navigate = useNavigate();
-  const { theme, changeTheme } = useContext(themeContext);
+  // const { theme, changeTheme } = useContext(themeContext);
   const [activeMenu, setActiveMenu] = useState(null);
   const [companyIndex, setCompanyIndex] = useState(0);
   const [countryIndex, setCountryIndex] = useState(0);
@@ -31,9 +31,9 @@ const Dashboard = () => {
   const handleMenuMouseOver = (index) => {
     setActiveMenu(activeMenu === index ? null : index);
   };
-  // const handleMouseOut=(index)=>{
-  //   setActiveMenu(null)
-  // }
+  const handleMouseOut=(index)=>{
+    setActiveMenu(null)
+  }
   const handleCompanyIndex = (ci) => {
     setCompanyIndex(ci);
   };
@@ -158,7 +158,7 @@ const Dashboard = () => {
               </button>
               <hr />
               <div
-              //  onMouseOut={()=>handleMouseOut()}
+               onMouseOut={()=>handleMouseOut()}
                 className={`listReports ${
                   activeMenu === index ? "listReportsVisual" : ""
                 }`}
