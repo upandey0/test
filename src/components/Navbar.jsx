@@ -4,16 +4,16 @@ import { IoIosNotifications } from "react-icons/io";
 import { FaCircleUser } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Switch } from "antd";
-import { themeContext } from "../context/mycontext";
+
 import { Link } from "react-router-dom";
 const Navbar = () => {
-  const { theme, changeTheme } = useContext(themeContext);
+
 
   return (
     <nav
-      class={`navbar navbar-expand-lg  h-100 navColor ${
-        theme === "dark" ? "dark-theme" : ".light-theme"
-      }`}
+      class="navbar navbar-expand-lg  h-100 navColor"
+     
+      
     >
       <div class="container-fluid">
         <button
@@ -122,18 +122,7 @@ const Navbar = () => {
                 </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link">
-                <span className="navMenuIcons">
-                  <Switch
-                    checked={theme === "dark"}
-                    onChange={changeTheme}
-                    checkedChildren="Dark"
-                    unCheckedChildren="Light"
-                  />
-                </span>
-              </a>
-            </li>
+           
           </ul>
         </div>
       </div>

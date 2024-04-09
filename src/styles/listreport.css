@@ -1,16 +1,21 @@
 .list-report{
-    height: 1rem; 
-    display: flex;
-  align-items: center;
+    height: 1.5rem;     /* display: flex; */
+  /* align-items: center; */
+  /* margin: auto; */
     
 }
+.list-center{
+  margin-left: 25%;
+}
 .list-report-text{
-    font-size:0.75rem ;
-    /* padding-left: 0.7rem;  */
-    /* padding-bottom: 0px;
-    margin-right:0px; */
+    font-size:0.75rem ;   
 }
 .list-icon{
   height:0.7rem;
   width:0.7rem;
+}
+.card-design{
+  width:80%;
+  margin:auto;
+  background-color: rgb(192, 208, 231) !important;
 }

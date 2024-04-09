@@ -45,6 +45,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+   
+}
+.menuItemChild .dash-icon{
+    font-size: 1rem !important;
+    margin:0.7rem;
 }
 
 .sidebar .menuItemNested {

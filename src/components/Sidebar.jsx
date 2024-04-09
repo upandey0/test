@@ -9,7 +9,7 @@ import {
 import { GiSellCard } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { themeContext } from "../context/mycontext";
+// import { themeContext } from "../context/mycontext";
 import { dashboards, arrangedApps } from "../dashboardRow";
 const Sidebar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -22,12 +22,12 @@ const Sidebar = () => {
   const handleSubMenuClick = (index) => {
     setActiveSubMenu(activeSubMenu === index ? null : index);
   };
-  const { theme } = useContext(themeContext);
+  // const { theme } = useContext(themeContext);
 
   return (
     <div
       className={`sidebar 
-       ${theme === "dark" ? "dark-theme" : ".light-theme"}
+       
     `}
     >
       <ul className="px-2">
@@ -35,9 +35,9 @@ const Sidebar = () => {
           <div className="menuItemNested">
             <div className="menuItemChild">
               <span>
-                <MdDashboard />
+                <MdDashboard className="dash-icon" />
               </span>
-              <Link to="#" disabled>
+              <Link to="#" className="dash-icon" disabled>
                 Dashboard
               </Link>
             </div>
@@ -68,9 +68,9 @@ const Sidebar = () => {
           <div className="menuItemNested">
             <div className="menuItemChild">
               <span>
-                <MdPages />
+                <MdPages  className="dash-icon"/>
               </span>
-              <Link to="#">Services</Link>
+              <Link to="#" className="dash-icon">Services</Link>
             </div>
             <div className="dropDownIcon">
               <span>
@@ -95,9 +95,9 @@ const Sidebar = () => {
           <div className="menuItemNested" onClick={() => handleMenuClick(1)}>
             <div className="menuItemChild">
               <span>
-                <MdHomeRepairService />
+                <MdHomeRepairService className="dash-icon"/>
               </span>
-              <Link to="#">App Pages</Link>
+              <Link to="#" className="dash-icon">App Pages</Link>
             </div>
             <div className="dropDownIcon">
               <span>
@@ -140,11 +140,11 @@ const Sidebar = () => {
           </ul>
         </li>
         <li>
-          <div className="menuItem">
+          <div className="menuItemChild">
             <span>
-              <GiSellCard />
+              <GiSellCard className="dash-icon"/>
             </span>
-            <Link to="/upload">Uploads</Link>
+            <Link to="/upload" className="dash-icon">Uploads</Link>
           </div>
         </li>
       </ul>

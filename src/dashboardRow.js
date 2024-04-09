@@ -106,7 +106,7 @@ export const appsName = [
 
 export const arrangedApps = [
   {
-    category: "Account",
+    category: "Accounting and Bookkeeping",
     apps: [
       { id: 1, name: "Billing" },
       { id: 2, name: "Notifications" },
@@ -115,7 +115,7 @@ export const arrangedApps = [
     ],
   },
   {
-    category: "Auth",
+    category: "Payroll Processing",
     apps: [
       { id: 5, name: " Login" },
       { id: 6, name: " Login (Social)" },
@@ -127,11 +127,11 @@ export const arrangedApps = [
     ],
   },
   {
-    category: "Invoice",
+    category: "Tax Planning and Preparation",
     apps: [{ id: 12, name: "Invoice" }],
   },
   {
-    category: "Knowledgebase",
+    category: "Financial Reporting",
     apps: [
       { id: 13, name: " Article" },
       { id: 14, name: " Category" },
@@ -140,13 +140,13 @@ export const arrangedApps = [
     ],
   },
   {
-    category: "Pricing",
+    category: "Audit ,Due diligence and Compliances",
     apps: [{ id: 17, name: "Pricing" }],
   },
-  {
-    category: "Wizard",
-    apps: [{ id: 18, name: "Wizard" }],
-  },
+  // {
+  //   category: "Wizard",
+  //   apps: [{ id: 18, name: "Wizard" }],
+  // },
 ];
 
 export const uploadDocs = [
@@ -163,12 +163,20 @@ export const uploadDocs = [
         listName: ["Services", "Assets", "Investment"],
       },
       {
-        name: "Credit note",
+        name: "Credit Note",
         listName: ["Credit note"],
       },
       {
-        name: "DebitNotes",
-        listName: ["DebitNotes"],
+        name: "Debit Notes",
+        listName: ["Debit Note"],
+      },
+      {
+        name: "Expenses",
+        listName: ["Expenses"],
+      },
+      {
+        name: "Capital",
+        listName: ["Capital"],
       },
     ],
   },
@@ -226,7 +234,7 @@ export const uploadDocs = [
         ],
       },
       {
-        name: "Hr",
+        name: "HR",
         listName: [
           "Employee Performance Dashboard",
           "Recruitment Dashboard",
@@ -241,7 +249,7 @@ export const uploadDocs = [
         ],
       },
       {
-        name: "Mis",
+        name: "MIS",
         listName: ["Docs"],
       },
       {
