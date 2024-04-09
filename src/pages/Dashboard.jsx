@@ -31,9 +31,9 @@ const Dashboard = () => {
   const handleMenuMouseOver = (index) => {
     setActiveMenu(activeMenu === index ? null : index);
   };
-  const handleMouseOut=(index)=>{
-    setActiveMenu(null)
-  }
+  // const handleMouseOut=(index)=>{
+  //   setActiveMenu(null)
+  // }
   const handleCompanyIndex = (ci) => {
     setCompanyIndex(ci);
   };
@@ -157,14 +157,15 @@ const Dashboard = () => {
                 </span> */}
               </button>
               <hr />
-              <div onMouseOut={()=>handleMouseOut()}
+              <div
+              //  onMouseOut={()=>handleMouseOut()}
                 className={`listReports ${
                   activeMenu === index ? "listReportsVisual" : ""
                 }`}
               >
                 <div>
                   {d?.reports?.map((re, i) => (
-                    <span
+                    <span className="fs-6"
                       onClick={() => navigate(`/dashboard/${d?.id}/sales/${i}`)}
                     >
                       {re}
@@ -190,7 +191,11 @@ const Dashboard = () => {
                 >
                   {d?.reports.map((r, i) => (
                     <SwiperSlide
+                     key={i}
                       onClick={() => navigate(`/dashboard/${d?.id}/sales/${i}`)}
+                      style={{
+                        width: '25%', // Set the slide width
+                      }}
                     >
                       <div
                         className={`innerCard ${index > 0 && "innerCardSize"}`}
