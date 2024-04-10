@@ -1,131 +1,142 @@
 .leftSide:nth-child(2) {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .navColor {
-    background-color: white !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .light-theme {
-    background-color: white !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .dark-theme {
-    background-color: black !important;
-    color: #fff !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  background-color: black !important;
+  color: #fff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
 .navMenuIcons {
-    font-size: 25px;
-    color: rgb(141, 141, 141);
+  font-size: 25px;
+  color: rgb(141, 141, 141);
 }
 
 .sidebar {
-    width: 100%;
-    background-color: white;
-    height: 90vh;
-    overflow-y: auto !important;
-    /* padding: 0 10px; */
-
+  width: 100%;
+  background-color: white;
+  height: 90vh;
+  overflow-y: auto !important;
+  /* padding: 0 10px; */
 }
 
 .sidebar ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .sidebar li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .sidebar .menuItem {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-   
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-.menuItemChild .dash-icon{
-    font-size: 1rem !important;
-    margin:0.7rem;
+.menuItemChild .dash-icon {
+  font-size: 1rem !important;
+  margin: 0.7rem;
 }
 
 .sidebar .menuItemNested {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .SubmenuItemNested {
-    display: flex;
-    align-items: baseline;
-    justify-content: baseline;
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
 }
-
-
 
 .menuItemChild {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-
-
-
-
 .sidebar li span {
-    font-size: 30px;
-    color: rgb(154, 199, 232);
-    /* align-self: center; */
+  font-size: 30px;
+  color: rgb(154, 199, 232);
+  /* align-self: center; */
 }
 
 .sidebar a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    /* padding:0 10px; */
-    font-size: 20px;
-    transition: background-color 0.3s;
-    align-self: center;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  /* padding:0 10px; */
+  font-size: 20px;
+  transition: background-color 0.3s;
+  align-self: center;
 }
 
 .dark-theme a {
-
-    color: #fff !important;
-
+  color: #fff !important;
 }
 
 .sidebar a:hover {
-    color: rgb(154, 199, 232);
+  color: rgb(154, 199, 232);
 }
 
 .sidebar ul ul {
-    display: none;
-    padding-left: 20px;
+  display: none;
+  padding-left: 20px;
 }
 
 .sidebar ul ul li a {
-    font-size: small;
-    margin: 0 20px;
+  font-size: small;
+  margin: 0 20px;
 }
 
 .sidebar ul.active {
-    display: block;
+  display: block;
 }
 
 .sidebar ul.activeSub {
-    display: block;
+  display: block;
 }
 
 .logoDesign {
-    font-size: 30px;
-    margin: 0 5px;
+  font-size: 30px;
+  margin: 0 5px;
 }
 
 .leftSide a {
-    text-decoration: none;
-    color: grey;
+  text-decoration: none;
+  color: grey;
+}
+
+.authButton {
+  border: 2px solid grey; /* Set border width and color */
+  border-radius: 10px; /* Make the button rounded */
+  padding: 1px 2px; /* Adjust padding as needed */
+  margin: 0px 3px;
+  background-color: transparent; /* Set background color to transparent */
+  color: grey; /* Set text color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Add smooth transition for background color change */
+  font-size: medium;
+}
+
+.authButton:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Fade background color on hover */
+}
+
+.authdiv {
+  display: flex;
+  align-items: center;
 }

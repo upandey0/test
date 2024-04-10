@@ -1,20 +1,57 @@
-import React, { useContext } from "react";
-import { IoReorderThreeOutline } from "react-icons/io5";
+import axios from "axios";
+import React from "react";
+import { useCookies } from "react-cookie";
 import { IoIosNotifications } from "react-icons/io";
-import { FaCircleUser } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { Switch } from "antd";
+import { useNavigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 const Navbar = () => {
+  const [cookies] = useCookies(["token"]);
 
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/login");
+  };
+
+  const handleSignUp = () => {
+    navigate("/signup");
+  };
+
+  const handleLogout = async () => {
+    const token = cookies.token;
+    // Check if token exists
+    if (!token) {
+      console.error("Token not found in cookies");
+      return;
+    }
+
+    try {
+      // Make POST request to backend
+      const response = await axios.get(
+        "http://localhost:8080/api/user/logout",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true
+        }
+      );
+      // Check if request was successful
+      if (response.data.success) {
+        navigate("/login");
+        console.log("Logout Successfully");
+      } else {
+        console.error("Signup failed:", response.data.message);
+      }
+    } catch (error) {
+      // Handle network error
+      console.error("Error:", error.message);
+    }
+  };
 
   return (
-    <nav
-      class="navbar navbar-expand-lg  h-100 navColor"
-     
-      
-    >
+    <nav class="navbar navbar-expand-lg  h-100 navColor">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -93,7 +130,7 @@ const Navbar = () => {
               <span>Home</span>
             </Link>
             <Link to="/">
-            <span className="mx-2">Subscription</span>
+              <span className="mx-2">Subscription</span>
             </Link>
           </div>
 
@@ -118,11 +155,23 @@ const Navbar = () => {
               <a class="nav-link">
                 <span className="navMenuIcons">
                   {" "}
-                  <FaCircleUser />
+                  {cookies.token ? (
+                    <button class="authButton" onClick={handleLogout}>
+                      Log out
+                    </button>
+                  ) : (
+                    <div class="authdiv">
+                      <button class="authButton" onClick={handleLogin}>
+                        Login
+                      </button>
+                      <button class="authButton" onClick={handleSignUp}>
+                        Signup
+                      </button>
+                    </div>
+                  )}
                 </span>
               </a>
             </li>
-           
           </ul>
         </div>
       </div>
