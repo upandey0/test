@@ -1,8 +1,11 @@
 .leftSide:nth-child(2) {
   margin: 0 10px;
+  margin: 0 10px;
 }
 
 .navColor {
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: white !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -19,13 +22,8 @@
 }
 
 .navMenuIcons {
-  font-size: 1rem;
-  color: rgb(201, 169, 169);
-  margin-inline: 0.8rem;
-}
-.navMenuIcons .img-icon{
-    height:2.2rem;
-    width:2.2rem;
+    font-size: 25px;
+    color: rgb(141, 141, 141);
 }
 
 .sidebar {
@@ -50,10 +48,9 @@
   align-items: center;
   justify-content: flex-start;
 }
-.menuItemChild .dash-icon {
-  font-size: 0.8rem !important;
-  margin: 0.6rem; 
-  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+.menuItemChild .dash-icon{
+    font-size: 1rem !important;
+    margin:0.7rem;
 }
 
 .sidebar .menuItemNested {
@@ -63,10 +60,9 @@
 }
 
 .SubmenuItemNested {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
- 
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
 }
 
 .menuItemChild {
@@ -118,9 +114,8 @@
 }
 
 .logoDesign {
-  font-size: 20px;
-  margin: 0px 0px -13px 15px;
-  vertical-align: middle;
+    font-size: 30px;
+    margin: 0 5px;
 }
 
 .leftSide a {
