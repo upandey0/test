@@ -43,8 +43,8 @@ const Navbar = () => {
                   preserveAspectRatio="xMidYMid meet"
                   data-bbox="20.303 25.565 159.393 148.871"
                   viewBox="20.303 25.565 159.393 148.871"
-                  height="25"
-                  width="25"
+                  height="18"
+                  width="18"
                   xmlns="http://www.w3.org/2000/svg"
                   data-type="color"
                   role="img"
@@ -71,7 +71,7 @@ const Navbar = () => {
                     ></path>
                   </g>
                 </svg>
-                <span className="logoDesign mt-5">
+                <span className="logoDesign ">
                   <b>f</b>-ai
                 </span>
               </h5>
@@ -92,7 +92,7 @@ const Navbar = () => {
             <Link to="/">
               <span>Home</span>
             </Link>
-            <Link to="/">
+            <Link to="/subscription">
             <span className="mx-2">Subscription</span>
             </Link>
           </div>
@@ -118,7 +118,7 @@ const Navbar = () => {
               <a class="nav-link">
                 <span className="navMenuIcons">
                   {" "}
-                  <FaCircleUser />
+                  <FaCircleUser className="img-icon"/>
                 </span>
               </a>
             </li>

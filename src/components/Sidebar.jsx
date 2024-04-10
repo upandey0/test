@@ -10,7 +10,7 @@ import { GiSellCard } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 // import { themeContext } from "../context/mycontext";
-import { dashboards, arrangedApps } from "../dashboardRow";
+import { dashboards, arrangedApps, appsPages } from "../dashboardRow";
 const Sidebar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
@@ -111,18 +111,18 @@ const Sidebar = () => {
           </div>
 
           <ul className={activeMenu === 1 ? "active" : ""}>
-            {arrangedApps?.map((a, i) => (
+            {appsPages?.map((a, i) => (
               <li onClick={() => handleSubMenuClick(i)} className="m-0 p-0 g-0">
                 <div className="SubmenuItemNested">
                   <div className="SubmenuItemChild">
                     <Link to="#">{a?.category}</Link>
                   </div>
-                  <div className="dropDownIcon">
-                    <span>
+                  <div className="dropDownIcon" style={{marginLeft:"1rem"}}>
+                    <span >
                       {activeSubMenu === i ? (
-                        <MdKeyboardArrowRight fontSize={20} />
+                        <MdKeyboardArrowRight  fontSize={20} />
                       ) : (
-                        <MdKeyboardArrowDown fontSize={20} />
+                        <MdKeyboardArrowDown  fontSize={20} />
                       )}
                     </span>
                   </div>

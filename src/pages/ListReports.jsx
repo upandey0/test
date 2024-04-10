@@ -13,7 +13,7 @@ function MyList() {
           <h4 className="text-center">List of Documents:</h4>
           <ol className="list-center">
             <li>
-              <ListItem button disableGutters className="list-report">
+              <ListItem  disableGutters className="list-report">
                 <ListItemText>
                   <Typography variant="body1" className="list-report-text">
                     <h6 className="list-report-text">Hr P&L report</h6>
@@ -25,7 +25,7 @@ function MyList() {
               <ListItem
                 component="a"
                 href="#"
-                button
+              
                 disableGutters
                 className="list-report"
               >
@@ -40,7 +40,7 @@ function MyList() {
               <ListItem
                 component="a"
                 href="#"
-                button
+              
                 disableGutters
                 className="list-report"
               >

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
+// import Subscription from "../../pages/Subscription";
 
 const Layout = ({ children }) => {
   return (

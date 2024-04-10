@@ -2,7 +2,7 @@ export const dashboards = [
   {
     id: 1,
     name: "Finance",
-    reports: ["Balance Sheet", "Profit and Loss", "Cash Flow"],
+    reports: ["Balance Sheet", "Profit and Loss", "Cash Flow", "Partners Capital"," Investment Schedule"],
   },
   {
     id: 2,
@@ -29,16 +29,16 @@ export const dashboards = [
     id: 3,
     name: "HR",
     reports: [
-      "Employee Performance Dashboard",
-      "Recruitment Dashboard",
-      "Employee Engagement Dashboard",
-      "Training and Development Dashboard",
-      "Turnover and Retention Dashboard",
-      "Diversity and Inclusion Dashboard",
-      "Compensation and Benefits Dashboard",
-      "Attendance and Leave Management Dashboard",
-      "Health and Wellness Dashboard",
-      "HR Analytics Dashboard",
+      "Employee Performance ",
+      "Recruitment ",
+      "Employee Engagement",
+      "Training and Development ",
+      "Turnover and Retention ",
+      "Diversity and Inclusion ",
+      "Compensation and Benefits ",
+      "Attendance and Leave Management ",
+      "Health and Wellness ",
+      "HR Analytics ",
     ],
   },
   {
@@ -106,7 +106,7 @@ export const appsName = [
 
 export const arrangedApps = [
   {
-    category: "Accounting and Bookkeeping",
+    category: "Accounting",
     apps: [
       { id: 1, name: "Billing" },
       { id: 2, name: "Notifications" },
@@ -115,7 +115,16 @@ export const arrangedApps = [
     ],
   },
   {
-    category: "Payroll Processing",
+    category: "Bookkeeping",
+    apps: [
+      { id: 1, name: "Billing" },
+      { id: 2, name: "Notifications" },
+      { id: 3, name: "Profile" },
+      { id: 4, name: "Security" },
+    ],
+  },
+  {
+    category: "Payroll",
     apps: [
       { id: 5, name: " Login" },
       { id: 6, name: " Login (Social)" },
@@ -127,7 +136,7 @@ export const arrangedApps = [
     ],
   },
   {
-    category: "Tax Planning and Preparation",
+    category: "Tax Planning",
     apps: [{ id: 12, name: "Invoice" }],
   },
   {
@@ -140,9 +149,63 @@ export const arrangedApps = [
     ],
   },
   {
-    category: "Audit ,Due diligence and Compliances",
+    category: "Audit",
     apps: [{ id: 17, name: "Pricing" }],
   },
+  {
+    category: "Due diligence",
+    apps: [{ id: 17, name: "Pricing" }],
+  },
+  {
+    category: " Compliances",
+    apps: [{ id: 17, name: "Pricing" }],
+  },
+  // {
+  //   category: "Wizard",
+  //   apps: [{ id: 18, name: "Wizard" }],
+  // },
+];
+
+export const appsPages = [
+  {
+    category: "Account",
+    apps: [
+      { id: 1, name: "Billing" },
+      { id: 2, name: "Notifications" },
+      { id: 3, name: "Profile" },
+      { id: 4, name: "Security" },
+    ],
+  },
+  {
+    category: "Authentication",
+    apps: [
+      { id: 1, name: "Basic" },
+      { id: 2, name: "Social" },
+    
+    ],
+  },
+  {
+    category: "Error",
+    apps: [
+      { id: 5, name: " 400 Error" },
+      { id: 6, name: " 401 Error" },
+      { id: 7, name: " 403" },
+      { id: 8, name: " 404 Error 1" },
+      { id: 9, name: " 404 Error 2" },
+      { id: 10, name: " 500 Error" },
+      { id: 11, name: " 503 Error " },
+      { id: 11, name: " 504 Error " },
+    ],
+  },
+  {
+    category: "Pricing",
+   
+  },
+  {
+    category: "Invoice",
+    
+  },
+
   // {
   //   category: "Wizard",
   //   apps: [{ id: 18, name: "Wizard" }],

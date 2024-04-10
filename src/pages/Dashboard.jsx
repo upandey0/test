@@ -9,20 +9,15 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
-import { themeContext } from "../context/mycontext";
+
 import { dashboards, arrangedApps } from "../dashboardRow";
-import {
-  MdDashboard,
-  MdPages,
-  MdHomeRepairService,
-  MdKeyboardArrowDown,
-  MdKeyboardArrowRight,
-} from "react-icons/md";
+import SearchIcon from "@mui/icons-material/Search";
+import { FormControl, Input, IconButton, InputAdornment } from "@mui/material";
+import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import company from "../company.json";
 console.log(company);
 const Dashboard = () => {
   const navigate = useNavigate();
-  // const { theme, changeTheme } = useContext(themeContext);
   const [activeMenu, setActiveMenu] = useState(null);
   const [companyIndex, setCompanyIndex] = useState(0);
   const [countryIndex, setCountryIndex] = useState(0);
@@ -31,9 +26,9 @@ const Dashboard = () => {
   const handleMenuMouseOver = (index) => {
     setActiveMenu(activeMenu === index ? null : index);
   };
-  const handleMouseOut=(index)=>{
-    setActiveMenu(null)
-  }
+  const handleMouseOut = (index) => {
+    setActiveMenu(null);
+  };
   const handleCompanyIndex = (ci) => {
     setCompanyIndex(ci);
   };
@@ -136,87 +131,116 @@ const Dashboard = () => {
           </div>
           <div className="dashboardheaderTop2 p-2 d-flex justify-content-center align-items-center">
             <div className="dashboardUserName ">
-              <h3>Welcome</h3>
-              <br />
-              <p>Vishal kumar</p>
+              {" "}
+              <h3>Welcome Vishal kumar</h3>
             </div>
           </div>
         </div>
-
-        {dashboards?.map((d, index) => (
-          <>
-            <div className="row firstHeading mt-1 p-2">
-              <button  className="border-0" onMouseOver={() => handleMenuMouseOver(index)} >
-                <span>{d.name}</span>
-                {/* <span >
+        <div className="d-flex align-items-center float-end w-25 m-2">
+          <FormControl className="w-100">
+            <Input
+              id="my-input"
+              className="border rounded-pill w-100"
+              aria-describedby="my-helper-text"
+              placeholder="Search Here..."
+              startAdornment={
+                <InputAdornment position="start">
+                  <IconButton aria-label="search">
+                    <SearchIcon />
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+        </div>
+        
+          {dashboards?.map((d, index) => (
+            <>
+              <div className="row firstHeading mt-1 p-2">
+                <button
+                  className="border-0"
+                  onMouseOver={() => handleMenuMouseOver(index)}
+                >
+                  <span>{d.name}</span>
+                  {/* <span >
                   {activeMenu === index ? (
                     <MdKeyboardArrowRight fontSize={35} />
                   ) : (
                     <MdKeyboardArrowDown fontSize={35} />
                   )}
                 </span> */}
-              </button>
-              <hr />
-              <div
-               onMouseOut={()=>handleMouseOut()}
-                className={`listReports ${
-                  activeMenu === index ? "listReportsVisual" : ""
-                }`}
-              >
-                <div>
-                  {d?.reports?.map((re, i) => (
-                    <span className="fs-6"
-                      onClick={() => navigate(`/dashboard/${d?.id}/sales/${i}`)}
-                    >
-                      {re}
-                    </span>
-                  ))}
+                </button>
+                <hr />
+                <div
+                  onMouseOut={() => handleMouseOut()}
+                  className={`listReports ${
+                    activeMenu === index ? "listReportsVisual" : ""
+                  }`}
+                >
+                  <div>
+                    {d?.reports?.map((re, i) => (
+                      <span
+                        className="fs-6"
+                        onClick={() =>
+                          navigate(`/dashboard/${d?.id}/sales/${i}`)
+                        }
+                      >
+                        {re}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="row p-2">
-              <div className="parentService my-2">
-                <Swiper
-                  slidesPerView={index > 0 ? 4 : 3}
-                  spaceBetween={20}
-                  // freeMode={true}
-                  centeredSlides={false}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  navigation={true}
-                  modules={[FreeMode, Pagination]}
-                  className="mySwiper"
-                >
-                  {d?.reports.map((r, i) => (
-                    <SwiperSlide
-                     key={i}
-                      onClick={() => navigate(`/dashboard/${d?.id}/sales/${i}`)}
-                      style={{
-                        width: '25%', // Set the slide width
-                      }}
-                    >
-                      <div
-                        className={`innerCard ${index > 0 && "innerCardSize"}`}
+              <div className="row p-2">
+                <div className="parentService " style={{height:"200px"}}>
+                  <Swiper
+                    
+                    slidesPerView={index > 0 ? 4 : 3}
+                    spaceBetween={20}
+                    // freeMode={true}
+                    centeredSlides={false}
+                    pagination={{
+                      clickable: true,
+                      el: '.swiper-pagination',
+                    }}
+                    navigation={true}
+                    modules={[FreeMode, Pagination]}
+                    className="mySwiper"
+                  >
+                    {d?.reports.map((r, i) => (
+                      <SwiperSlide
+                        key={i}
+                        onClick={() =>
+                          navigate(`/dashboard/${d?.id}/sales/${i}`)
+                        }
+                        style={{
+                          width: "25%", // Set the slide width
+                        }}
                       >
-                        <img
-                          src="https://assets.startbootstrap.com/img/screenshots-product-pages/sb-admin-pro/pages/account-billing.png"
-                          alt="1"
-                        />
-                        <p>{r}</p>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+                        <div
+                          className={`innerCard ${
+                            index > 0 && "innerCardSize"
+                          }`}
+                        >
+                          <img
+                            src="https://assets.startbootstrap.com/img/screenshots-product-pages/sb-admin-pro/pages/account-billing.png"
+                            alt="1"
+                          />
+                          <p>{r}</p>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                      <div className="swiper-pagination"></div>
+                  </Swiper>
+                </div>
               </div>
-            </div>
-          </>
-        ))}
+            </>
+          ))}
+        </div>
         <div className="row firstHeading mt-1 p-2">
           <h3>App Pages</h3>
-          <hr />
-        </div>
+          <hr />        
 
         {arrangedApps?.map((a, i) => (
           <>

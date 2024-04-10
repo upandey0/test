@@ -11,6 +11,7 @@ import Sales from "./pages/Sales";
 import Dashboard from "./pages/Dashboard";
 import ReportsType from "./pages/ReportsType";
 import UploadReports from "./pages/UploadReports";
+import Subscription from "./pages/Subscription";
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard/:id" element={<ReportsType />} />
-
+          <Route path="/subscription" element={<Subscription />} />
           <Route path="/dashboard/:id/sales/:id" element={<Sales />} />
           <Route path="/upload" element={<UploadReports />} />
         </Routes>
