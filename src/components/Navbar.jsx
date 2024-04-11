@@ -155,7 +155,7 @@ const Navbar = () => {
               <a class="nav-link">
                 <span className="navMenuIcons">
                   {" "}
-                  <FaCircleUser />
+                  {/* <FaCircleUser /> */}
                 </span>
               </a>
             </li>

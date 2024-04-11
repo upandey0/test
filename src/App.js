@@ -21,22 +21,13 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Routes>
-<<<<<<< HEAD
+          <Route path="/login" element = {<Login/>}/>
+          <Route path="/signup" element = {<Signup/>}/>
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard/:id" element={<ReportsType />} />
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/dashboard/:id/sales/:id" element={<Sales />} />
           <Route path="/upload" element={<UploadReports />} />
-=======
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route element={<ProtectedRoute />}>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/dashboard/:id" element={<ReportsType />} />
-            <Route path="/dashboard/:id/sales/:id" element={<Sales />} />
-            <Route path="/upload" element={<UploadReports />} />
-          </Route>
->>>>>>> origin/main
         </Routes>
       </BrowserRouter>
     </div>

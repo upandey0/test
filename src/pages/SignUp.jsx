@@ -32,7 +32,7 @@ const Signup = () => {
     try {
       // Make POST request to backend
       const response = await axios.post(
-        "http://localhost:8080/api/user/signup",
+        "https://f-ai-backend-seven.vercel.app/api/user/signup",
         formData,
         {
           headers: {
